@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import zbroj from "./import/default";
+import * as All from "./import/named_export";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Broj broja 1 i 2 = {zbroj(1, 2)}</p>
+      <p>ime: {All.name} </p>
+      <p>Prezime: {All.surname} </p>
+      <p>Oduzimanje brojeva {All.oduzimanje(5, 3)}</p>
     </div>
   );
 }
